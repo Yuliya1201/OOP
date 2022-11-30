@@ -2,36 +2,45 @@ public class Main {
     public static void main(String[] args) {
         Man maksim = new Man(1988,"Максим","Минск","бренд менеджером");
         maksim.name = "Максим";
-        maksim.town = "Минск";
-        maksim.yearOfBirth = 1988;
+        maksim.setTown("Минск");
+        maksim.setYearOfBirth(1988);
         maksim.jobTitle = "бренд менеджером.";
-        System.out.println("Привет! Меня зовут " + maksim.name + ". Я из города " + maksim.town +
-                ". Я родился в " + maksim.yearOfBirth + " году.Я работаю на должгости " + maksim.jobTitle + " Будем знакомы!");
+        System.out.println("Привет! Меня зовут " + maksim.name + ". Я из города " + maksim.getTown() +
+                ". Я родился в " + maksim.getYearOfBirth() + " году.Я работаю на должгости " + maksim.jobTitle + " Будем знакомы!");
+
 
 
         Man katy = new Man(1992,"Катя","Калининград","продакт менеджером");
         katy.name = "Катя";
-        katy.yearOfBirth = 1992;
-        katy.town = " Калининград";
+        katy.setYearOfBirth(1992);
+        katy.setTown(" Калининград");
         katy.jobTitle = "продакт менеджером.";
-        System.out.println("Привет! Меня зовут " + katy.name + ". Я из города " + katy.town +
-                ". Я родилась в " + katy.yearOfBirth + " году. Я работаю на должности " + katy.jobTitle + " Будем знакомы!");
+        System.out.println("Привет! Меня зовут " + katy.name + ". Я из города " + katy.getTown() +
+                ". Я родилась в " + katy.getYearOfBirth() + " году. Я работаю на должности " + katy.jobTitle + " Будем знакомы!");
 
 
         Man any = new Man(1993,"Аня","Москва","методистом образовательных программ.");
-        any.yearOfBirth = 1993;
-        any.town = "Москва";
+        any.setYearOfBirth(1993);
+        any.setTown("Москва");
         any.name = "Аня";
         any.jobTitle = "методистом образовательных программ.";
-        System.out.println("Привет! Меня зовут " + any.name + ". Я из города " + any.town +
-                ". Я родиллась в " + any.yearOfBirth +" году.Я работаю на должности " + any.jobTitle +" Будем знакомы!");
+        System.out.println("Привет! Меня зовут " + any.name + ". Я из города " + any.getTown() +
+                ". Я родиллась в " + any.getYearOfBirth() +" году.Я работаю на должности " + any.jobTitle +" Будем знакомы!");
 
         Man artem = new Man(1995,"Артем","Москва","директором по развитию бизнеса.");
         artem.name = "Артем";
-        artem.yearOfBirth = 1995;
-        artem.town = "Москва";
+        artem.setYearOfBirth(1995);
+        artem.setTown("Москва");
         artem.jobTitle = "директором по развитию бизнеса.";
-        System.out.println("Привет! Меня зовут " + artem.name + ". Я из города " + artem.town + ". Я родился в " + artem.yearOfBirth +" году.Я работаю " + artem.jobTitle + " Будем знакомы!");
+        System.out.println("Привет! Меня зовут " + artem.name + ". Я из города " + artem.getTown() + ". Я родился в " + artem.getYearOfBirth() +" году.Я работаю " + artem.jobTitle + " Будем знакомы!");
+
+
+        Man vladimir = new Man( 0,"Владимир","Казань","нигде не работаю");
+        vladimir.name ="Владимир";
+        vladimir.setAge(21);
+        vladimir.setTown("Казань");
+        vladimir.jobTitle= ",нигде не работаю";
+        System.out.println("Меня зовут "+ vladimir.name + ". Я из города " + vladimir.getTown() + ", мне " + vladimir.getAge()+ "лет" + vladimir.jobTitle);
 
 
         // Задание 2 и задание 3
@@ -84,4 +93,5 @@ public class Main {
         System.out.println("Автомобиль " + huinday.brend+huinday.model+ "сборка "+ huinday.country +"цвет кузова — "+  huinday.color + " объем двигателя "+ huinday.engineVolume+ "год выпуска "+ huinday.year);
 
     }
+
 }
